@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(394, 15);
+            this.label1.Location = new System.Drawing.Point(378, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 24);
             this.label1.TabIndex = 4;
@@ -52,16 +52,16 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(310, 224);
+            this.pictureBox1.Size = new System.Drawing.Size(361, 268);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(326, 39);
+            this.label2.Location = new System.Drawing.Point(379, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(334, 265);
+            this.label2.Size = new System.Drawing.Size(315, 268);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
