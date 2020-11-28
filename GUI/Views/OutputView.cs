@@ -211,7 +211,7 @@ namespace ARMSim.GUI.Views
         public uint CreateStandardConsole(string title)
         {
             StandardIOConsole console = new StandardIOConsole();
-            console.ConsoleHandle = _nextHandle++; ;
+            console.ConsoleHandle = _nextHandle++;
             console.CurrentFont = this.CurrentFont;
             console.CurrentBackgroundColour = this.CurrentBackgroundColour;
             console.CurrentTextColour = this.CurrentTextColour;

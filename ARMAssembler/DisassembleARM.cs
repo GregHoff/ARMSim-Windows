@@ -57,7 +57,7 @@ public class DisassembleARM {
         if (condition == null)
         {
             if ((opCode & 0xFF000000) == 0xFF000000)
-                return String.Format("{0,-7} 0X{1:X}", "SWI", opCode&0x00FFFFFF); ;
+                return String.Format("{0,-7} 0X{1:X}", "SWI", opCode&0x00FFFFFF);
             return null;  // special instruction?
         }
 	    opName = null;

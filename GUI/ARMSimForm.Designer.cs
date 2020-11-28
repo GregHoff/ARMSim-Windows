@@ -530,7 +530,7 @@
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "ARMSimForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "ARMSim# - The ARM Simulator Dept. of Computer Science";
+			this.Text = "ARMSim# - The ARM Simulator";
 			this.Load += new System.EventHandler(this.ARMSimForm_Load);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
