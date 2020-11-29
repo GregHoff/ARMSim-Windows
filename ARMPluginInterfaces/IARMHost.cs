@@ -330,6 +330,13 @@ namespace ARMPluginInterfaces
         uint CreateStandardConsole(string title);
 
         /// <summary>
+        /// Get a standard console if it existed otherwise create one
+        /// </summary>
+        /// <param name="title">Title in title bar</param>
+        /// <returns></returns>
+        uint GetStandardConsole(string title);
+
+        /// <summary>
         /// Close a standard console
         /// </summary>
         /// <param name="handle">handle of console</param>

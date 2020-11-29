@@ -229,6 +229,24 @@ namespace ARMSim.GUI.Views
         }//CreateStandardConsole
 
         /// <summary>
+        /// Get a standard console. 
+        /// </summary>
+        /// <param name="title">title of the requested standard console</param>
+        /// <returns>handle of console</returns>
+        public uint GetStandardConsole(string title)
+        {
+            foreach (TabPage tabPage in this.tabControl1.TabPages)
+            {
+                StandardIOConsole console = tabPage.Tag as StandardIOConsole;
+                if (console != null && tabPage.Text == title)
+                {
+                    return console.ConsoleHandle;
+                }
+            }
+            return CreateStandardConsole(title);
+        }//GetStandardConsole
+
+        /// <summary>
         /// Close a standard console. Removes it from the tab control and remove from the list
         /// of consoles.
         /// </summary>

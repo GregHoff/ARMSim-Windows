@@ -263,7 +263,17 @@ namespace ARMSim.Simulator.Plugins
         /// <returns>handle of console</returns>
         uint IARMHost.CreateStandardConsole(string title) {
             if (_outputView == null) return consoleCnt++;
-            else  return _outputView.CreateStandardConsole(title);
+            else return _outputView.CreateStandardConsole(title);
+        }
+
+        /// <summary>
+        /// Get a standard console titled title if one exists. 
+        /// </summary>
+        /// <param name="title">title of the requested standard console</param>
+        /// <returns>handle of console</returns>
+        uint IARMHost.GetStandardConsole(string title) {
+            if (_outputView == null) return consoleCnt;
+            else return _outputView.GetStandardConsole(title);
         }
 
         /// <summary>

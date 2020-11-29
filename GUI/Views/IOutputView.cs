@@ -28,6 +28,13 @@ namespace ARMSim.GUI.Views
         uint CreateStandardConsole(string title);
 
         /// <summary>
+        /// Get a standard console.
+        /// </summary>
+        /// <param name="title">title of the requested standard console</param>
+        /// <returns>handle of console</returns>
+        uint GetStandardConsole(string title);
+
+        /// <summary>
         /// Close a standard console. Removes it from the tab control and remove from the list
         /// of consoles.
         /// </summary>

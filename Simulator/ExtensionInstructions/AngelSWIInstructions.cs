@@ -172,9 +172,8 @@ namespace ARMSim.Simulator.ExtensionInstructions
         private void SetupStreams()
         {
             closeAllStreams();
-            mIhost.CloseStandardConsole(mStdioConsole);
 
-            mStdioConsole = mIhost.CreateStandardConsole("stdin/stdout/stderr");
+            mStdioConsole = mIhost.GetStandardConsole("stdin/stdout/stderr");
 
             ARMPluginInterfaces.Preferences.IGeneralPreferences prefs = mIhost.ARMPreferences.IGeneralPreferences;
             IARMSimArguments args = mIhost.ARMSimArguments;
