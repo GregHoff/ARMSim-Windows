@@ -50,21 +50,12 @@ namespace ARMSim.Preferences
 			if (!mSettingsPlugins.Contains(item))
 				mSettingsPlugins.Add(item);
         }
-
-
-        public void EnableSWIExtendedInstructions()
+        public void EnableSWIExtendedInstructions( string which = "Angel")
         {
-            AddPlugin(new PluginSettingsItem("AngelSWIInstructions", "ARMSim.exe"));
-        }
-
-        public void EnableSWIExtendedInstructions( string which )
-        {
-            if (which == null)
-                return;
-            if (which.StartsWith("A"))
-                AddPlugin(new PluginSettingsItem("AngelSWIInstructions", "ARMSim.exe"));
-            else if (which.StartsWith("L"))
+            if (which.StartsWith("L"))
                 AddPlugin(new PluginSettingsItem("LegacySWIInstructions", "ARMSim.exe"));
+            else 
+                AddPlugin(new PluginSettingsItem("AngelSWIInstructions", "ARMSim.exe"));
         }
 
         /// <summary>
