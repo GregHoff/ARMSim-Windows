@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{F00ABBA6-5A4E-4E49-9F5D-E29829ABC737}"
 EndProject
@@ -28,8 +28,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARMSim.Plugins.ButtonTimerPlugin", "Plugins\ARMSim.Plugins.ButtonTimerPlugin\ARMSim.Plugins.ButtonTimerPlugin.csproj", "{AD684F64-1146-4993-A35E-D1575B7761FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockingWindows2", "ARMSimWindowManager\DockingWindows2\DockingWindows2.csproj", "{90BADE90-0874-44B1-8B4A-E386F7A89FC5}"
-EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Installer", "Installer\Installer.wixproj", "{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,16 +159,6 @@ Global
 		{90BADE90-0874-44B1-8B4A-E386F7A89FC5}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{90BADE90-0874-44B1-8B4A-E386F7A89FC5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{90BADE90-0874-44B1-8B4A-E386F7A89FC5}.Release|x86.ActiveCfg = Release|Any CPU
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Debug|x86.ActiveCfg = Debug|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Debug|x86.Build.0 = Debug|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Release|Any CPU.ActiveCfg = Release|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Release|Mixed Platforms.Build.0 = Release|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Release|x86.ActiveCfg = Release|x86
-		{EBBBA5B7-B9F7-47EF-92E2-26118684B76A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -183,5 +171,8 @@ Global
 		{0D60FCDF-C7D1-4F10-BDE0-7374369619C2} = {F00ABBA6-5A4E-4E49-9F5D-E29829ABC737}
 		{C9E75411-78B3-455B-A480-6965E9DCCB12} = {F00ABBA6-5A4E-4E49-9F5D-E29829ABC737}
 		{AD684F64-1146-4993-A35E-D1575B7761FD} = {F00ABBA6-5A4E-4E49-9F5D-E29829ABC737}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E3B93FF-A4FA-405C-85DD-45EA780E1BB9}
 	EndGlobalSection
 EndGlobal

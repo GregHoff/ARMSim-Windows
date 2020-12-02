@@ -15,7 +15,8 @@
     <ErrorReportUrlHistory />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <StartArguments>-B /P:space:space+27 Angel_print_int.s</StartArguments>
+    <StartArguments>
+    </StartArguments>
     <StartWorkingDirectory>
     </StartWorkingDirectory>
   </PropertyGroup>
