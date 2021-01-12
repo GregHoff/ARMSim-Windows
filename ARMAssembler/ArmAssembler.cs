@@ -47,7 +47,17 @@ public class ArmAssembler {
 		if (fileList == null)
             throw new ARMSimException("no source files provided");
 		this.fileList = new List<string>(fileList);
-		initialize();
+        // Bill M was here. We are checking the files before making the passes,
+        // because during the passes, object files that are in archices "count" as
+        // a file and are added to the file list. Then an exception is thrown when
+        // the pass checks for the existance. So I moved this to the constructor(s).
+        // Truth is that in the window for, say, selecting multiple files, you pick
+        // the files, so they needed exit at that point. But this class checked, so 
+        // I figured better to move the check than to eliminate it.
+        for (int i = 0; i < this.fileList.Count; i++)
+            if (!File.Exists(this.fileList[i]))
+                throw new AsmException("Cannot access the file named \"" + this.fileList[i] + "\"");
+        initialize();
 	}
 
 	// another version of constructor which handles several files
@@ -55,14 +65,21 @@ public class ArmAssembler {
 		if (fileList == null)
             throw new ARMSimException("no source files provided");
 		this.fileList = fileList;
-		initialize();
+        // Bill M: See above.
+        for (int i = 0; i < this.fileList.Count; i++)
+            if (!File.Exists(this.fileList[i]))
+                throw new AsmException("Cannot access the file named \"" + this.fileList[i] + "\"");
+        initialize();
 	}
 
 	// version of constructor when there is only one file
 	public ArmAssembler( string fileName ) {
 		fileList = new List<string>(1);
 		fileList[0] = fileName;
-		initialize();
+        // Bill M: See above - again.
+        if (!File.Exists(this.fileList[0]))
+            throw new AsmException("Cannot access the file named \"" + this.fileList[0] + "\"");
+        initialize();
 	}
 
     // methods
@@ -95,8 +112,9 @@ public class ArmAssembler {
 	// perform pass 1 over all the input files
 	public void PerformPass() {
 		pass = 1;
-		for( int i=0;  i<fileList.Count;  i++ )
-			processFile(i);
+        for (int i = 0; i < fileList.Count; i++)
+                processFile(i);
+
         if (externSymbols.Count > 0)
             revisitLibraries();
 		passComplete[1] = true;
@@ -251,8 +269,15 @@ public class ArmAssembler {
 			Debug.WriteLine("error? -- missing file name");
 			return;
 		}
-		if (!File.Exists(currFileName))
-			throw new AsmException("Cannot access file "+currFileName);
+     
+        // Bill M. was here. We do NOT want to check for the existence of the files here.
+        // As libraries are scanned the file list increases, and the names of the fuctions
+        // from the library is added to the filename. Thus, bring in "printf" or something
+        // and you get "libc.a(printf.o)" which does not exist.
+
+        // if (!File.Exists(currFileName))
+			// throw new AsmException("Cannot access the file named \"" + currFileName + "\"");
+
         ArmFileInfo fileInfo = FileInfoTable[i];
         switch (getSuffix(currFileName))
         {
