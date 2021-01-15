@@ -16,10 +16,10 @@
       <PluginUIView />
     </Views>
     <MRUMenuSettings>
-      <RecentFiles />
-      <MultiFiles Files="C:\Users\student\source\repos\GregHoff\ARMSim-Windows\Build201\tryit.s,C:\Users\student\source\repos\GregHoff\ARMSim-Windows\Build201\start.o,C:\Users\student\source\repos\GregHoff\ARMSim-Windows\Build201\libc.a,C:\Users\student\source\repos\GregHoff\ARMSim-Windows\Build201\libcs3hosted.a,C:\Users\student\source\repos\GregHoff\ARMSim-Windows\Build201\libgcc.a" MultiFiles="False" />
+      <RecentFiles Files="False" />
+      <MultiFiles MultiFiles="False" />
     </MRUMenuSettings>
-    <ARMPreferences>
+    <ARMPreferences LastTab="Plugins">
       <SimulatorPreferences>
         <MainMemory StartAddress="00001000" StackArea="0020" HeapArea="0020" FillPattern="81818181" StopOnMisaligned="True" StackGrowsDown="True" ProtectTextArea="False" />
       </SimulatorPreferences>
@@ -32,81 +32,10 @@
         <StandardFiles StdoutOverwrite="False" StderrOverwrite="False" />
       </GeneralPreferences>
       <Plugins>
+        <ActivatedPlugin Name="EmbestBoardPlugin" Assembly="ARMSim.Plugins.EmbestBoardPlugin.DLL" />
+        <ActivatedPlugin Name="LegacySWIInstructions" Assembly="ARMSim.exe" />
         <ActivatedPlugin Name="AngelSWIInstructions" Assembly="ARMSim.exe" />
       </Plugins>
     </ARMPreferences>
   </ARMSimApplicationSettings>
-  <DockingLayout>
-    <!--DockPanel configuration file. Author: Weifen Luo, all rights reserved.-->
-<!--!!! AUTOMATICALLY GENERATED FILE. DO NOT MODIFY !!!-->
-<DockPanel FormatVersion="1.0" DockLeftPortion="200" DockRightPortion="200" DockTopPortion="150" DockBottomPortion="150" ActiveDocumentPane="1" ActivePane="1">
-  <Contents Count="9">
-    <Content ID="0" PersistString="RegistersView" AutoHidePortion="200" IsHidden="False" IsFloat="False" />
-    <Content ID="1" PersistString="CodeView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-    <Content ID="2" PersistString="OutputView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-    <Content ID="3" PersistString="WatchView" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-    <Content ID="4" PersistString="PluginUIControlsView" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-    <Content ID="5" PersistString="DataCacheView" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-    <Content ID="6" PersistString="InstructionCacheView" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-    <Content ID="7" PersistString="UnifiedCacheView" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-    <Content ID="8" PersistString="StackView" AutoHidePortion="200" IsHidden="False" IsFloat="False" />
-  </Contents>
-  <Panes Count="5">
-    <Pane ID="0" DockState="DockLeft" ActiveContent="0">
-      <Contents Count="1">
-        <Content ID="0" RefID="0" />
-      </Contents>
-    </Pane>
-    <Pane ID="1" DockState="Document" ActiveContent="1">
-      <Contents Count="1">
-        <Content ID="0" RefID="1" />
-      </Contents>
-    </Pane>
-    <Pane ID="2" DockState="Document" ActiveContent="2">
-      <Contents Count="2">
-        <Content ID="0" RefID="2" />
-        <Content ID="1" RefID="3" />
-      </Contents>
-    </Pane>
-    <Pane ID="3" DockState="Document" ActiveContent="-1">
-      <Contents Count="4">
-        <Content ID="0" RefID="4" />
-        <Content ID="1" RefID="5" />
-        <Content ID="2" RefID="6" />
-        <Content ID="3" RefID="7" />
-      </Contents>
-    </Pane>
-    <Pane ID="4" DockState="DockRightAutoHide" ActiveContent="8">
-      <Contents Count="1">
-        <Content ID="0" RefID="8" />
-      </Contents>
-    </Pane>
-  </Panes>
-  <DockWindows>
-    <DockWindow ID="0" DockState="Document" ZOrderIndex="1">
-      <NestedPanes Count="3">
-        <Pane ID="0" RefID="1" PrevPane="-1" Alignment="Right" Proportion="0.5" />
-        <Pane ID="1" RefID="2" PrevPane="1" Alignment="Bottom" Proportion="0.25" />
-        <Pane ID="2" RefID="3" PrevPane="1" Alignment="Top" Proportion="0.25" />
-      </NestedPanes>
-    </DockWindow>
-    <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="2">
-      <NestedPanes Count="1">
-        <Pane ID="0" RefID="0" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
-      </NestedPanes>
-    </DockWindow>
-    <DockWindow ID="2" DockState="DockRight" ZOrderIndex="3">
-      <NestedPanes Count="1">
-        <Pane ID="0" RefID="4" PrevPane="-1" Alignment="Bottom" Proportion="0.5" />
-      </NestedPanes>
-    </DockWindow>
-    <DockWindow ID="3" DockState="DockTop" ZOrderIndex="4">
-      <NestedPanes Count="0" />
-    </DockWindow>
-    <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="5">
-      <NestedPanes Count="0" />
-    </DockWindow>
-  </DockWindows>
-  <FloatWindows Count="0" />
-</DockPanel></DockingLayout>
 </DockingWindows2>
