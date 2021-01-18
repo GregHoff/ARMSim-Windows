@@ -276,6 +276,8 @@ public class ArmElfReader : IDisposable{
 					s = getString((uint)sectNameIx);
 					switch(s) {
 						case ".text":
+						case ".text.hot":
+						case ".text.unlikely":
 							st = SectionType.Text;  break;
 						case ".data":
 							dataSize = size;
@@ -342,6 +344,8 @@ public class ArmElfReader : IDisposable{
                 continue;
 			switch(name) {
 				case ".text":
+				case ".text.hot":
+				case ".text.unlikely":
 					textSect = sectionTable[i];  break;
 				case ".data":
 					dataSect = sectionTable[i];  break;
@@ -466,6 +470,8 @@ public class ArmElfReader : IDisposable{
 				symbol.name, s, symbol.value, symbol.size));
 		switch(s) {
 			case ".text":
+			case ".text.hot":
+			case ".text.unlikely":
 				st = SectionType.Text;  break;
 			case ".data":
 				st = SectionType.Data;  break;

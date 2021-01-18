@@ -401,7 +401,7 @@ namespace ARMSim.Simulator.ExtensionInstructions
 					binary = true;
 					mode &= 0xffffffe;
 				}
-                if (binary)
+                if (binary && (stdFileNum > 2))
                     ARMPluginInterfaces.Utils.OutputDebugString("binary mode files unsupported");
 
 				mErrno = Errno.NONE;
@@ -542,7 +542,12 @@ namespace ARMSim.Simulator.ExtensionInstructions
                     mErrno = Errno.EFAULT; break;
                 }
 				addr++;
-                nbytes--;
+                if ((ch == 13) && (acstream is ARMSimConsoleStream))
+                {
+                    nbytes = 0;
+                } else { 
+                    nbytes--;
+                }
             }
 			return nbytes;
 		}
